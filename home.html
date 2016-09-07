@@ -7,10 +7,11 @@
     <title>Training Bootstrap</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-material-design.css" rel="stylesheet">
     <link href="css/ripples.css" rel="stylesheet">
 
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,7 +20,7 @@
     <![endif]-->
   </head>    
     <!-- Put Navigation bar here  -->
-    <div class="navbar navbar-warning">
+    <div class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
@@ -40,6 +41,8 @@
 	</div>
     <!--Put Content website here -->
     <div class="container">
+    	<div class="row">
+    	<div class="col-md-8 col-md-offset-2">
 	    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
 		  <ol class="carousel-indicators">
@@ -50,13 +53,13 @@
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 		    <div class="item active">
-		      <img src="img/3.jpg" alt="Test Pertama">
+		      <img src="img/carrousel1.jpg" alt="Test Pertama">
 		      <div class="carousel-caption">
 		        First
 		      </div>
 		    </div>
 		    <div class="item">
-		      <img src="img/2.jpg" alt="Test Kedua">
+		      <img src="img/carrousel2.jpg" alt="Test Kedua">
 		      <div class="carousel-caption">
 		        Second
 		      </div>
@@ -73,29 +76,50 @@
 		    <span class="sr-only">Next</span>
 		  </a>
 		</div>
+		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-12">
+    			&nbsp;
+    		</div>
+    	</div>
 		<div class="row">
 			<div class="col-md-8">
-				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</blockquote>
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
 			</div>
 			<div class="col-md-4">
-				<blockquote>Facebook : tsani.nashrullah@gmail.com<br>Twitter : @trsnw<br>Telepon : 089679698616 <br> Alamat : Jl. Abdul Halim</blockquote>
+				<h4>Facebook : tsani.nashrullah@gmail.com<br><br>Twitter : @trsnw<br><br>Telepon : 089679698616 <br><br> Alamat : Jl. Abdul Halim</h4>
 			</div>
 		</div>
     </div>
     <script type="text/javascript"> 
     $('.carousel').carousel({
-	  interval: 500;
-	  keyboard: false;
+	  interval: 50;
 	})
 	</script>
+	    <!-- Sliders -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script> -->
+    <script>
+      $(function () {
+        $.material.init();
+        $(".shor").noUiSlider({
+          start: 40,
+          connect: "lower",
+          range: {
+            min: 0,
+            max: 100
+          }
+        });
+      });
+    </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1-11-1.min.js"></script>
-    <!-- BOOTSTRAP MATERIAL DESIGN -->
+    <!-- BOOTSTRAP MATERIAL DESIGN --> 
     <script src="js/material.js"></script>
     <script src="js/ripples.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

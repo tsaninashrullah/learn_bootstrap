@@ -7,10 +7,11 @@
     <title>Training Bootstrap</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-material-design.css" rel="stylesheet">
     <link href="css/ripples.css" rel="stylesheet">
 
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,7 +20,7 @@
     <![endif]-->
   </head>    
     <!-- Put Navigation bar here  -->
-    <div class="navbar navbar-warning">
+    <div class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
@@ -45,7 +46,7 @@
     			<h1>Tsani Nashrullah</h1>
     			<img src="img/profile.png" alt="My Profile" class="img-responsive img-circle" width="60%">
     		</div>
-    		<div class="col-md-9">
+    		<div class="col-md-9 table-responsive">
     			<table class="table table-hover">
     				<tr>
     					<td width="25%"><strong><p>Nama</p></strong></td>
@@ -72,9 +73,34 @@
     		</div>
     	</div>
     </div>
+        <!-- Sliders -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
+    <script>
+      $(function () {
+        $.material.init();
+        $(".shor").noUiSlider({
+          start: 40,
+          connect: "lower",
+          range: {
+            min: 0,
+            max: 100
+          }
+        });
+
+        $(".svert").noUiSlider({
+          orientation: "vertical",
+          start: 40,
+          connect: "lower",
+          range: {
+            min: 0,
+            max: 100
+          }
+        });
+      });
+    </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1-11-1.min.js"></script>
-    <!-- BOOTSTRAP MATERIAL DESIGN -->
+    <!-- BOOTSTRAP MATERIAL DESIGN --> 
     <script src="js/material.js"></script>
     <script src="js/ripples.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

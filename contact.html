@@ -7,10 +7,16 @@
     <title>Training Bootstrap</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-<!--     <link href="css/bootstrap-material-design.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-material-design.css" rel="stylesheet">
     <link href="css/ripples.css" rel="stylesheet">
- -->
+
+    <!-- <link href="//cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet"> -->
+    
+    <!-- <link href="index.css" rel="stylesheet"> -->
+
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -69,15 +75,22 @@
                         <h4>Email</h4>
                     </div>
                     <div class="col-md-9">
-                        <input type="email" name="email" class="form-control" placeholder="Email Anda">
+                        <div class="form-group label-floating">
+                            <label for="i5" class="control-label">Email Anda</label>
+                            <input type="email" class="form-control" id="i5">
+                            <span class="help-block">This is a hint as a <code>youremail@example.com</code></span>
+                          </div>
+                        </div>
                     </div>
-                </div>
                 <div class="row">
                     <div class="col-md-3">
                         <h4>Message</h4>
                     </div>
                     <div class="col-md-9">
-                        <textarea class="form-control" name="messages" placeholder="Messages Anda" rows="10"></textarea>
+                        <div class="form-group label-floating">
+                            <label for="i5" class="control-label">Messages Anda</label>
+                            <textarea class="form-control" id="i5" rows="12"></textarea>
+                          </div>
                     </div>
                 </div>
                 <div class="row">
@@ -87,17 +100,41 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <center><button class="btn btn-primary" type="submit">Submit</button></center>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-1-11-1.min.js"></script>
-    <!-- BOOTSTRAP MATERIAL DESIGN --><!-- 
+    <!-- Sliders -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
+    <script>
+      $(function () {
+        $.material.init();
+        $(".shor").noUiSlider({
+          start: 40,
+          connect: "lower",
+          range: {
+            min: 0,
+            max: 100
+          }
+        });
+
+        $(".svert").noUiSlider({
+          orientation: "vertical",
+          start: 40,
+          connect: "lower",
+          range: {
+            min: 0,
+            max: 100
+          }
+        });
+      });
+    </script>
+
+    <!-- BOOTSTRAP MATERIAL DESIGN --> 
     <script src="js/material.js"></script>
-    <script src="js/ripples.js"></script> -->
+    <script src="js/ripples.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
